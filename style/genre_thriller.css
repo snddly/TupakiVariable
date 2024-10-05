@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Tupaki2.0VF';
+    src: url('Tupaki2.0VF.ttf') format('truetype');
+}
+
+body {
+    background: #1B171E;
+    color: #120F15;
+    margin: 0;
+  
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content {
+    font-family: 'Tupaki2.0VF', sans-serif;
+    font-variation-settings: "RMNC"0, "CMDY"0, "ACTN"0, "THRL"1000;
+    text-align: right;
+    font-size: 8vw; /* 글자 크기 조정 */
+    background: none;
+    padding: 20px;
+}
+
+
+.content:active {
+	color: #81FF92;
+}
+
+:root {
+    cursor: none;
+    --cX: 50vw;
+    --cY: 50vh;
+    --rSize: 10vmax; /* 기본 반경 크기 */
+}
+
+:root:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    background: radial-gradient(circle var(--rSize) at var(--cX) var(--cY),
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, .5) 80%,
+        rgba(0, 0, 0, .95) 100%);
+    transition: background 0.2s ease-out;
+}

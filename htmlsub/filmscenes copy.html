@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/filmscenes copy.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="settings">
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Type...">
+
+                <div class="dropdown">
+                    <button id="dropdownToggle"></button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <label class="radiocontainer"><input type="radio" name="searchOption" value="both" checked>
+                            Title and Quotes
+                            <span class="checkmark"></span></label>
+                        <label class="radiocontainer"><input type="radio" name="searchOption" value="title"> Title <span
+                                class="checkmark"></span></label>
+                        <label class="radiocontainer"><input type="radio" name="searchOption" value="author"> Quotes
+                            <span class="checkmark"></span></label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="filter-section">
+                <div class="filter-box">
+                    <label class="filtername">Genre</label>
+                    <div class="checkboxwrap">
+                        <input type="checkbox" class="genreFilter" id="fantasy" value="fantasy"><label
+                            for="fantasy"><em></em>Fantasy</label><br>
+                    </div>
+
+                    <div class="checkboxwrap">
+                        <input type="checkbox" class="genreFilter" id="mystery" value="mystery"><label
+                            for="mystery"><em></em>
+                            Mystery</label><br>
+                    </div>
+                    <div class="checkboxwrap">
+                        <input type="checkbox" class="genreFilter" id="romance" value="romance"><label
+                            for="romance"><em></em>
+                            Romance</label><br>
+                    </div>
+                </div>
+                <div class="filter-box">
+
+                    <label class="filtername">Country</label>
+
+                    <div class="checkboxwrap">
+                        <input type="checkbox" class="countryFilter" id="korea" value="korea"> <label
+                            for="korea"><em></em>Korea</label><br>
+                    </div>
+                    <div class="checkboxwrap">
+                        <input type="checkbox" class="countryFilter" id="usa" value="usa"> <label
+                            for="usa"><em></em>USA</label><br>
+                    </div>
+                    <div class="checkboxwrap">
+                        <input type="checkbox" class="countryFilter" id="japan" value="japan"> <label
+                            for="japan"><em></em>Japan</label><br>
+                    </div>
+                </div>
+                <button id="resetBtn">× Reset</button>
+            </div>
+            <!--SLIDER 시작-->
+            <div class="slider-section">
+                <label class="filtername">Year</label>
+                <div class="slider-container">
+                    <div class="multi-range-slider">
+                        <!-- 현재값을 표시할 요소 -->
+                        <div class="slider-labels">
+                            <span id="left-value">0</span>
+                            <span id="right-value">2025</span>
+                        </div>
+
+                        <!-- 진짜 슬라이더 -->
+                        <input type="range" id="input-left" min="1940" max="2025" value="1940" step="5" />
+                        <input type="range" id="input-right" min="1940" max="2025" value="2025" step="5" />
+
+                        <!-- 커스텀 슬라이더 -->
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="listable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Country</th>
+                        <th>Genre</th>
+                        <th>Title</th>
+                        <th>Speaker</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021</td>
+                        <td>Korea</td>
+                        <td>Action, Drama</td>
+                        <td>hahahamoviename</td>
+                        <td>Me</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Korea</td>
+                        <td>Drama</td>
+                        <td>hahahamoviename</td>
+                        <td>Me</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Korea</td>
+                        <td>Action, Drama</td>
+                        <td>hahahamoviename</td>
+                        <td>Me</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!--SLIDER 종료-->
+    <script src="../script/filmscenes copy.js"></script>
+</body>
+
+</html>
