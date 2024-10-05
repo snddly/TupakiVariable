@@ -271,7 +271,7 @@ input::placeholder {
     width: 100%;
 }
 
-#preview-control{
+#preview-control {
     width: 20vw;
     position: sticky;
     top: 2vh;
@@ -281,8 +281,10 @@ input::placeholder {
 
 /* 미리보기 창 스타일 */
 .glyphpreview {
-    width: 18vw; /* 정사각형 비율 유지 */
-    height: 18vw; /* 정사각형 비율 유지 */
+    width: 18vw;
+    /* 정사각형 비율 유지 */
+    height: 18vw;
+    /* 정사각형 비율 유지 */
     border: 1px solid hsla(0, 0%, 100%, 0.5);
     display: flex;
     justify-content: center;
@@ -390,4 +392,57 @@ input[type="checkbox"]:hover {
 .glyph:hover {
     color: #000000;
     background-color: #ffffff;
+}
+
+/* 작은 화면 (모바일)에서 스타일 조정 */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    #intro {
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+    #intro span {
+        width: 100%;
+    }
+
+    .outputbox {
+        flex-direction: column;
+    }
+
+    #text-input {
+        width: 80%;
+    }
+
+    .style-block {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .style-block h4 {
+        padding-bottom: 0%;
+    }
+
+    .controls
+
+   .buttons{
+    width: 40%;
+   }
+
+    .button-container {
+        display: none;
+    }
+
+    #glyphbox {
+        display: none;
+    }
+
 }
