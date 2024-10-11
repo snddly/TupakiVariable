@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Tupaki2.0VF';
-    src: url('Tupaki2.0VF.ttf') format('truetype');
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
 }
 
 body {
@@ -50,7 +50,7 @@ main {
     border: none;
     outline: none;
     color: #ffffff;
-    font-family: 'Tupaki2.0VF';
+    font-family: 'Tupaki2.5VF';
     flex: 1 0 0;
 }
 

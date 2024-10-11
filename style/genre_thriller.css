@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Tupaki2.0VF';
-    src: url('Tupaki2.0VF.ttf') format('truetype');
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 .content {
-    font-family: 'Tupaki2.0VF', sans-serif;
+    font-family: 'Tupaki2.5VF', sans-serif;
     font-variation-settings: "RMNC"0, "CMDY"0, "ACTN"0, "THRL"1000;
     text-align: right;
     font-size: 8vw; /* 글자 크기 조정 */

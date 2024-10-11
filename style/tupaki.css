@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Tupaki2.0VF';
-    src: url('Tupaki2.0VF.ttf') format('truetype');
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
 }
 
 
@@ -117,14 +117,14 @@ main {
 
 
 .uuse_container {
-    background-image: url(img/tupakibg.png);
+    background-image: url(../img/tupakibg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .use_container {
-    font-family: 'Tupaki2.0VF', sans-serif;
+    font-family: 'Tupaki2.5VF', sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -213,15 +213,15 @@ main {
     border: none;
     background-color: transparent;
     text-align: left;
-    color: hsla(0, 0%, 100%, 0.5);
-    mix-blend-mode: difference;
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    font-family: 'Tupaki2.5VF', sans-serif;
+    opacity: 70%;
 }
 
 input::placeholder {
-    color: hsla(0, 0%, 100%, 0.5);
-    mix-blend-mode: difference;
+    opacity: 70%;
     font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
-    font-weight: normal;
+    font-family: 'Tupaki2.5VF', sans-serif;
 }
 
 .buttons {
@@ -292,7 +292,7 @@ input::placeholder {
 }
 
 #glyphpreview-text {
-    font-family: 'Tupaki2.0VF', sans-serif;
+    font-family: 'Tupaki2.5VF', sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -359,7 +359,7 @@ input[type="checkbox"]:hover {
 /* 추가 폰트 스타일 (사용자 정의 가능) */
 .glyph,
 #glyphpreview-text {
-    font-family: 'Tupaki2.0VF', sans-serif;
+    font-family: 'Tupaki2.5VF', sans-serif;
 }
 
 
@@ -376,7 +376,7 @@ input[type="checkbox"]:hover {
 
 /* 각 글리프 */
 .glyph {
-    font-family: 'Tupaki2.0VF', sans-serif;
+    font-family: 'Tupaki2.5VF', sans-serif;
     aspect-ratio: 1 / 1;
     border: 1px solid hsla(0, 0%, 100%, 0.2);
     color: white;
@@ -398,11 +398,10 @@ input[type="checkbox"]:hover {
 @media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
-        padding: 10px;
     }
 
-    nav {
-        flex-direction: column;
+    main {
+        margin: 5%;
     }
 
     #intro {
@@ -419,7 +418,8 @@ input[type="checkbox"]:hover {
     }
 
     #text-input {
-        width: 80%;
+        width: 100%;
+        font-size: 1rem;
     }
 
     .style-block {
@@ -431,11 +431,9 @@ input[type="checkbox"]:hover {
         padding-bottom: 0%;
     }
 
-    .controls
-
-   .buttons{
-    width: 40%;
-   }
+    .controls .buttons {
+        width: 40%;
+    }
 
     .button-container {
         display: none;
