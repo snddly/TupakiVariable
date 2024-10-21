@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 대사 데이터베이스</title>
+    <link rel="stylesheet" href="../style/filmscenes.css">
+
+    <!-- noUiSlider CSS 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<script>
+  // 페이지를 10분(600,000 밀리초)마다 새로고침
+  setInterval(function() {
+      location.reload(); // 페이지 새로 고침
+  }, 600000); // 600,000ms = 10분
+
+  function previousVideo() {
+      // 이전 비디오 로직
+  }
+
+  function nextVideo() {
+      // 다음 비디오 로직
+  }
+</script>
+<body>
+    <main>
+        <video id="videoPlayer" width="640" height="360">
+            <source id="videoSource" src="">
+            Your browser does not support the video tag.
+          </video>
+   
+          <button class="nav-btn prev" onclick="previousVideo()">
+            <span class="material-icons">chevron_left</span>
+          </button>
+          <button class="nav-btn next" onclick="nextVideo()">
+            <span class="material-icons">chevron_right</span>
+          </button>
+
+    </main>
+
+    <!-- noUiSlider JS 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js"></script>
+    <script src="../script/filmscenes.js"></script>
+</body>
+
+</html>

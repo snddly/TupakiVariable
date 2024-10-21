@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE23E;
+
+}
+
+.center-text {
+    text-align: center;
+}
+
+#dynamic-text {
+    font-size: 15rem;
+    transition: font-variation-settings 0.3s ease;
+    cursor:default;
+    font-family: 'Tupaki2.5VF', sans-serif;
+    letter-spacing: 0.8rem;
+    font-variation-settings: "RMNC" 500, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    color: #76290080;
+}
+
+#dynamic-text span {
+    display: inline-block;
+    transition: font-variation-settings 0.5s ease, transform 0.5s ease, color 0.5s ease, letter-spacing 0.5s ease
+    /* 폰트 축 변화, 크기, 간격 변화를 위한 트랜지션 */
+;}
+
+#dynamic-text span.shrink {
+    transform: scale(0.95, 1);
+    /* 글자 가로/세로 비율 축소 */
+    letter-spacing: -0.02em;
+    /* 글자 간격 좁히기 */
+}
+
+#dynamic-text span.expand {
+    color: #762900;
+
+    transform: scale(1.1);
+    /* 호버된 글자의 크기를 키움 */
+}
+
+#dynamic-text span.side-expand {
+    color: #762900cc;
+    transform: scale(1.05);
+    /* 좌우 글자의 크기를 110%로 미세하게 키움 */
+}

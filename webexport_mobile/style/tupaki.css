@@ -1,0 +1,446 @@
+@font-face {
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Hack, monospace;
+    line-height: 1.6;
+}
+
+main {
+    margin: 8%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+#intro span {
+    width: 48%;
+    margin-right: 30px;
+}
+
+/*버튼*/
+
+#playVideoBtn {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.text {
+    font-weight: 100;
+    letter-spacing: 1.8px;
+    font-family: Hack, monospace;
+    font-size: 17px;
+    fill: #ff9419;
+    mix-blend-mode: difference;
+}
+
+#rotatingText {
+    animation-name: rotate-circle;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-circle {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.spintext {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.spintext img {
+    position: absolute;
+    animation-name: rotate-circle;
+    animation-direction: reverse;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* 팝업 창 스타일 */
+.popup {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 580px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #554e5a;
+    z-index: 1000;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #000000;
+}
+
+.close {
+    padding-left: 10px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 드래그 가능한 팝업 */
+.popup {
+    cursor: move;
+    position: absolute;
+}
+
+
+.uuse_container {
+    background-image: url(../img/tupakibg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.use_container {
+    font-family: 'Tupaki2.5VF', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #000000;
+}
+
+.outputbox {
+    height: 100%;
+    min-height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 1.5%;
+}
+
+.style-block {
+    width: 20%;
+    height: 100%;
+    padding: 0.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.style-block h4 {
+    font-family: Hack, monospace;
+    font-weight: 100;
+    font-size: 1rem;
+    padding-bottom: 5%;
+    margin: 0;
+    color: hsla(0, 0%, 100%, 0.5);
+    mix-blend-mode: difference;
+}
+
+.text-output {
+    font-size: 2rem;
+    line-height: 1.5;
+    word-break: break-all;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#output1 {
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    /*REGULAR*/
+}
+
+#output2 {
+    font-variation-settings: "RMNC" 1000, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    /*ROMANCE*/
+}
+
+#output3 {
+    font-variation-settings: "RMNC" 0, "CMDY" 1000, "ACTN" 0, "THRL" 0;
+    /*COMEDY*/
+}
+
+#output4 {
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 1000, "THRL" 0;
+    /*ACTION*/
+}
+
+
+#output5 {
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 1000;
+    /*THRILLER*/
+}
+
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid white;
+}
+
+
+#text-input {
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 1%;
+    padding-left: 2%;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    font-family: 'Tupaki2.5VF', sans-serif;
+    opacity: 70%;
+}
+
+input::placeholder {
+    opacity: 70%;
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    font-family: 'Tupaki2.5VF', sans-serif;
+}
+
+.buttons {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    color: #777;
+}
+
+#fontsizebtn,
+#colorbtn {
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-left: 1px solid white;
+    background-color: transparent;
+    font-family: Hack, monospace;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+#fontsizebtn {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#colorbtn {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/*글리프 미리보기*/
+/* 전체 레이아웃 */
+#glyphbox {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#preview-control {
+    width: 20vw;
+    position: sticky;
+    top: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 미리보기 창 스타일 */
+.glyphpreview {
+    width: 18vw;
+    /* 정사각형 비율 유지 */
+    height: 18vw;
+    /* 정사각형 비율 유지 */
+    border: 1px solid hsla(0, 0%, 100%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#glyphpreview-text {
+    font-family: 'Tupaki2.5VF', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    color: white;
+    width: 15vw;
+}
+
+
+/* 폰트 변경 버튼 스타일 */
+.glyph-controls {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 1%;
+}
+
+/* 공통 스타일 */
+input[type="checkbox"] {
+    appearance: none;
+    /* 기본 체크박스 스타일 제거 */
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    outline: none;
+    transition: background-color 0.2s, border-color 0.2s;
+    /* 애니메이션 추가 */
+}
+
+/* 체크박스가 체크된 상태 */
+input[type="checkbox"]:checked {
+    background-color: #ffffff;
+    /* 체크박스 배경색 */
+}
+
+/* 호버 시 스타일 */
+input[type="checkbox"]:hover {
+    border: 1px solid hsla(0, 0%, 100%, 0.5);
+}
+
+
+/* 라벨 스타일 */
+.checkbox-label {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* 추가 폰트 스타일 (사용자 정의 가능) */
+.glyph,
+#glyphpreview-text {
+    font-family: 'Tupaki2.5VF', sans-serif;
+}
+
+
+/* 글리프 그리드 스타일 */
+.glyph-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 기본적으로 5개의 열 */
+    grid-gap: 0vw;
+    /* 그리드 셀 간격도 비율 단위로 */
+    width: 75%;
+    /* 그리드의 너비를 부모 요소에 맞춤 */
+}
+
+/* 각 글리프 */
+.glyph {
+    font-family: 'Tupaki2.5VF', sans-serif;
+    aspect-ratio: 1 / 1;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    /* 글리프의 폰트 크기를 뷰포트 너비에 맞춰 조정 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.glyph:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* 작은 화면 (모바일)에서 스타일 조정 */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 5%;
+    }
+
+    #intro {
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+    #intro span {
+        width: 100%;
+    }
+
+    .outputbox {
+        flex-direction: column;
+    }
+
+    #text-input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .style-block {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .style-block h4 {
+        padding-bottom: 0%;
+    }
+
+    .controls .buttons {
+        width: 40%;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    #glyphbox {
+        display: none;
+    }
+
+}
