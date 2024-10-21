@@ -1,7 +1,5 @@
 // 비디오 파일 경로 배열
 const videos = [
-    '../video/헤어질결심.mov', 
-    '../video/타짜.mov', 
     '../video/판타스틱미스터폭스.mov'
 ];
 
