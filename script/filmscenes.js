@@ -1,6 +1,6 @@
 // 비디오 파일 경로 배열
 const videos = [
-    '../video/판타스틱미스터폭스.mov'
+    '../video/fantasticmrfox.mov'
 ];
 
 let currentIndex = Math.floor(Math.random() * videos.length); // 첫 랜덤 비디오 인덱스 설정
