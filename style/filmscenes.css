@@ -1,0 +1,52 @@
+/* 전체 화면에 비디오를 가득 채우는 스타일 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000; /* 배경을 검정색으로 설정해서 비디오가 깔끔하게 보이게 함 */
+    position: relative;
+}
+
+video {
+    width: 100vw; /* 뷰포트 너비 100% */
+    height: 100vh; /* 뷰포트 높이 100% */
+    object-fit: cover; /* 비디오가 화면을 채우도록 설정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 버튼 박스의 위치 설정을 삭제하고, 개별 버튼을 좌우로 배치 */
+.nav-btn {
+    position: fixed; /* fixed로 변경하여 항상 화면 좌우 끝에 위치하도록 설정 */
+    top: 50%; /* 화면의 세로 중앙에 위치 */
+    transform: translateY(-50%); /* 정확하게 중앙으로 위치 조정 */
+    background: none; /* 버튼을 반투명하게 설정 */
+    color:rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 100; /* z-index를 크게 설정하여 버튼이 항상 비디오 위에 보이도록 함 */
+}
+
+.nav-btn:hover {
+    color: rgba(255, 255, 255, 0.7); /* 버튼 hover 효과 */
+}
+
+.prev {
+    left: 30px; /* 화면 왼쪽 끝에 위치 */
+}
+
+.next {
+    right: 30px; /* 화면 오른쪽 끝에 위치 */
+}
+
+/* Material Icons 스타일 */
+.nav-btn .material-icons {
+    font-size: 55px; /* 아이콘 크기 조정 */
+    vertical-align: middle; /* 아이콘이 버튼 중앙에 위치하도록 조정 */
+    color: rgba(255, 255, 255, 0.5); /* 아이콘 색상 */
+}
+
+.nav-btn:hover .material-icons {
+    color: rgba(255, 255, 255, 0.7); /* hover 시 아이콘 색상 변경 */
+}

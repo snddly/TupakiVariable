@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I wanna be a star [TupakiVariable]</title>
+    <link rel="stylesheet" href="../style/camera.css">
+    <link rel="stylesheet" href="../style/slider.css">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20,300,0,0"/>
+</head>
+
+<body>
+    <!-- ((시작))메뉴 리스트 -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="arrowicon"></div>
+    </div>
+
+    <ul id="menu" class="menu">
+        <!-- 투파키 소개 -->
+        <li><a href="../index.html">TUPAKI who?</a></li>
+        <!-- 장르별 애니메이션 -->
+        <li><a href="genres.html">You do you</a></li>
+        <!-- 랜덤애니메이션 -->
+        <li><a href="animation.html">Parade begins...</a></li>
+        <!-- 영화에 적용 -->
+        <li><a href="filmscenes.html">Action!</a></li>
+        <!-- 호버링 -->
+        <li><a href="mouseover.html">Keep moving</a></li>
+        <!-- 카메라적용 -->
+        <li><a style="background-color:#ffaa00 !important; color:#000000 !important;" href="#" onclick="return false;">I
+                wanna be a star</a></li>
+    </ul>
+    <script src="../script/menu.js"></script>
+    <!-- ((끝))메뉴 리스트 -->
+    <div class="webcam-container">
+        <video id="webcam" autoplay playsinline></video>
+        <div id="subtitle-container">
+            <textarea id="subtitle-text" rows="2" maxlength="50" placeholder="텍스트를 입력하세요."></textarea>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="bottom-right-controls">
+            <button id="captureBtn">Capture</button>
+
+            <button id="font-settings"><span class="material-symbols-sharp">tune</span>Font-Genre-Settings</button>
+            <button id="surprise-me"><span class="material-symbols-sharp">experiment</span>Surprise Me!</button>
+        </div>
+        <div id="slidersbox">
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span class="genrename">Romance</span>
+                    <span id="romanceValue">0</span>
+                </div>
+                <input type="range" id="romanceSlider" class="slider" min="0" max="1000" value="0">
+                <div class="slider-values">
+                    <span>0</span>
+                    <span>1000</span>
+                </div>
+            </div>
+            <hr />
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span class="genrename">Comedy</span>
+                    <span id="comedyValue">0</span>
+                </div>
+                <input type="range" id="comedySlider" class="slider" min="0" max="1000" value="0">
+                <div class="slider-values">
+                    <span>0</span>
+                    <span>1000</span>
+                </div>
+            </div>
+            <hr />
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span class="genrename">Action</span>
+                    <span id="actionValue">0</span>
+                </div>
+                <input type="range" id="actionSlider" class="slider" min="0" max="1000" value="0">
+                <div class="slider-values">
+                    <span>0</span>
+                    <span>1000</span>
+                </div>
+            </div>
+            <hr />
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span class="genrename">Thriller</span>
+                    <span id="thrillerValue">0</span>
+                </div>
+                <input type="range" id="thrillerSlider" class="slider" min="0" max="1000" value="0">
+                <div class="slider-values">
+                    <span>0</span>
+                    <span>1000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/camera.js"></script>
+    <script src="../script/slider.js"></script>
+    <script>
+        // 페이지를 10분(600,000 밀리초)마다 새로고침
+        setInterval(function() {
+            location.reload(); // 페이지 새로 고침
+        }, 600000); // 600,000ms = 10분
+      
+        function previousVideo() {
+            // 이전 비디오 로직
+        }
+      
+        function nextVideo() {
+            // 다음 비디오 로직
+        }
+      </script>
+</body>
+
+</html>

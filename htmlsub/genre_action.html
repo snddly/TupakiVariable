@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Action_You do you [TupakiVariable]</title>
+    <!-- 메뉴스타일 -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/genre_action.css">
+</head>
+
+<body>
+    <!-- ((시작))메뉴 리스트 -->
+    <a href="genres.html">
+        <div class="menu-icon" onclick="genres.html">
+            <div class="arrowicon"></div>
+        </div>
+    </a>
+    <script src="../script/menu.js"></script>
+    <!-- ((끝))메뉴 리스트 -->
+    <div class="center-text">
+        <p id="dynamic-text">죽는줄알았어</p>
+    </div>
+
+    <script src="../script/genre_action.js"></script>
+    <script>
+        // 페이지를 10분(600,000 밀리초)마다 새로고침
+        setInterval(function() {
+            location.reload(); // 페이지 새로 고침
+        }, 600000); // 600,000ms = 10분
+      
+        function previousVideo() {
+            // 이전 비디오 로직
+        }
+      
+        function nextVideo() {
+            // 다음 비디오 로직
+        }
+      </script>
+</body>
+
+</html>
