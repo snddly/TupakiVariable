@@ -1,0 +1,233 @@
+/*네비게이션화살표아이콘*/
+
+.menu-icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  
+}
+
+
+.arrowicon{
+  width: 30px;
+	height: 30px;
+  background-color: #ffffff;
+	border-radius: 50%;
+	position: relative;
+  border: none;
+  outline: 2px solid #000000;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 9px;
+		left: 11px;
+		width: 10px;
+		height: 10px;
+		border-left: 2px solid #000000;
+  	border-bottom: 2px solid #000000;
+		transform: rotate(45deg);
+}}
+
+.arrowicon:hover{
+	animation: moveleft 1.5s infinite;
+	-webkit-animation: moveleft 1.5s infinite;
+}
+
+@keyframes moveleft {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateX(-15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes moveleft {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateX(-15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+
+
+
+/*부채네비게이션리스트*/
+.menu {
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  font-family: Hack, monospace;
+  mix-blend-mode: difference;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 닫힐 때도 트랜지션 적용 */
+  transform: scale(0.9); /* 닫힐 때 살짝 작아지도록 처리 */
+}
+
+.menu li {
+  transform-origin: top left;
+  margin: 15px 0;
+  color: #000000;
+  border: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+
+.menu li:nth-child(1) {
+  transform: rotate(10deg) translateX(-50px) translateY(10px);
+  transition-delay: 0s;
+}
+
+.menu li:nth-child(2) {
+  transform: rotate(20deg) translateX(-50px) translateY(10px); /* 더 많은 Y축 이동 */
+  transition-delay: 0.1s;
+}
+
+.menu li:nth-child(3) {
+  transform: rotate(30deg) translateX(-50px) translateY(10px); /* 더 많은 Y축 이동 */
+  transition-delay: 0.2s;
+}
+
+.menu li:nth-child(4) {
+  transform: rotate(40deg) translateX(-50px) translateY(10px); /* 더 많은 Y축 이동 */
+  transition-delay: 0.3s;
+}
+
+.menu li:nth-child(5) {
+  transform: rotate(50deg) translateX(-50px) translateY(10px); /* 더 많은 Y축 이동 */
+  transition-delay: 0.4s;
+}
+
+.menu li:nth-child(6) {
+  transform: rotate(60deg) translateX(-50px) translateY(10px); /* 더 많은 Y축 이동 */
+  transition-delay: 0.5s;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+  font-size: 0.8rem;
+  padding: 10px;
+  display: block;
+  border: none;
+  outline: 2px solid #000000;
+}
+
+.menu li a:hover{
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #ffffff inset;
+  border: none;
+  outline: 2px solid #000000;
+}
+
+
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1); /* 열릴 때 크기 복구 */
+}
+
+.menu.open li {
+  opacity: 1;
+}
+
+/* 닫힐 때의 상태를 추가 */
+.menu li:nth-child(1),
+.menu li:nth-child(2),
+.menu li:nth-child(3),
+.menu li:nth-child(4),
+.menu li:nth-child(5),
+.menu li:nth-child(6) {
+  transform: rotate(0deg) translateX(0px) translateY(0px); /* 초기 닫힌 상태 */
+  transition-delay: 0s;
+}
+
+.menu.open li:nth-child(1) {
+  transform: rotate(-0deg) translateX(35px) translateY(-20px); /* 완만한 곡선 */
+  transition-delay: 0s;
+}
+
+.menu.open li:nth-child(2) {
+  transform: rotate(5deg) translateX(33px) translateY(-32px); /* 곡선을 그리며 이동 */
+  transition-delay: 0.1s;
+}
+
+.menu.open li:nth-child(3) {
+  transform: rotate(10deg) translateX(25px) translateY(-43px); /* 점점 더 곡선을 그리며 이동 */
+  transition-delay: 0.2s;
+}
+
+.menu.open li:nth-child(4) {
+  transform: rotate(15deg) translateX(12px) translateY(-50px); /* 더 큰 곡선 이동 */
+  transition-delay: 0.3s;
+}
+
+.menu.open li:nth-child(5) {
+  transform: rotate(20deg) translateX(-7px) translateY(-57px); /* 더 큰 곡선 */
+  transition-delay: 0.4s;
+}
+
+.menu.open li:nth-child(6) {
+  transform: rotate(25deg) translateX(-30px) translateY(-60px); /* 최종 위치 */
+  transition-delay: 0.5s;
+}
+
+/*//////*/
+
+footer {
+  font-size: 0.8rem;
+  font-weight: regular;
+  color: #ffffffb0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+footer h4{
+  opacity: 100%;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+footer hr{
+ margin-top: 30px; 
+ border: solid 0.5px #ffffff1b;
+}
+
+.footercontact a{
+text-decoration: none;
+color: #ffaa00;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+.menu-icon {
+  display: none;
+}
+}
