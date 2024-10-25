@@ -90,3 +90,41 @@ thrillerSlider.addEventListener('input', updateFontVariation);
 function goBack() {
     history.back();
 }
+
+
+document.getElementById('captureBtn').addEventListener('click', async function () {
+  try {
+    // 화면 공유(스크린 캡쳐) 요청
+    const stream = await navigator.mediaDevices.getDisplayMedia({
+      video: { mediaSource: 'screen' }
+    });
+
+    const video = document.createElement('video');
+    video.srcObject = stream;
+    video.play();
+
+    // 비디오 메타데이터 로드 완료 시 캡쳐 진행
+    video.onloadedmetadata = function () {
+      // 캔버스에 그리기
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      const context = canvas.getContext('2d');
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // 이미지 URL 생성
+      const imageUrl = canvas.toDataURL('image/png');
+
+      // 다운로드 링크 생성 및 자동 클릭
+      const link = document.createElement('a');
+      link.href = imageUrl;
+      link.download = 'screenshot.png';
+      link.click();
+
+      // 스트림 중지
+      stream.getTracks().forEach(track => track.stop());
+    };
+  } catch (err) {
+    console.error('Capture error:', err);
+  }
+});
