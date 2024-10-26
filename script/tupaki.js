@@ -29,7 +29,7 @@ let bgTextIndex = 0;
 // Update the output texts when typing in the input box
 textInput.addEventListener('input', () => {
     outputs.forEach(output => {
-        output.textContent = textInput.value || '텍스트를 입력하세요...';
+        output.textContent = textInput.value || '투파키 배리어블';
     });
 });
 
