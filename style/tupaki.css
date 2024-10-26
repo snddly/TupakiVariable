@@ -216,6 +216,7 @@ main {
     font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
     font-family: 'Tupaki2.5VF', sans-serif;
     opacity: 70%;
+      color: #ffffff;
 }
 
 input::placeholder {
