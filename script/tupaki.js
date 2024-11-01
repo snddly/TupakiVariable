@@ -14,7 +14,7 @@ const fontsizebtn = document.getElementById('fontsizebtn');
 const colorbtn = document.getElementById('colorbtn');
 
 let fontSizeIndex = 0;
-const fontSizes = ['3rem', '3.5rem', '4rem', '4.5rem'];
+const fontSizes = ['2rem', '2.5rem', '3rem', '3.5rem'];
 const fontSizeMultipliers = ['× 1', '× 1.2', '× 1.5', '× 2']; // 배율 표시를 위한 배열
 
 const bgTextCombinations = [
