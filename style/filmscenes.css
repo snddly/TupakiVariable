@@ -1,0 +1,17 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* 스크롤바 숨기기 */
+    background-color: #000; /* 블랙바를 위한 배경 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100vw; /* 가로 너비를 화면에 맞춤 */
+    height: auto; /* 높이를 자동으로 맞춰 비율 유지 */
+    aspect-ratio: 16 / 9; /* 유튜브 영상 비율을 유지 */
+    background-color: #000; /* 블랙바 배경색 */
+}

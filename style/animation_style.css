@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
+}
+
+body {
+    width: 100vw;
+    height: 100vh; /* 높이를 전체 화면으로 설정 */
+    overflow: hidden;
+    text-align: center;
+
+    font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    font-family: 'Tupaki2.5VF', sans-serif;
+    white-space: nowrap;
+    font-size: clamp(5rem, 20vw, 13rem);
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0;
+    animation: bgChange 6s infinite;
+}
+
+.content-container {
+    line-height: 110%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div span {
+    display: inline-block;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: change;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes change {
+    0%, 27% {
+        font-variation-settings: "RMNC" 0, "CMDY" 1000, "ACTN" 0, "THRL" 0;
+    }
+
+    27%, 50% {
+        font-variation-settings: "RMNC" 1000, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    }
+
+    50%, 72% {
+        font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 1000, "THRL" 0;
+    }
+
+    72%, 95% {
+        font-variation-settings: "RMNC" 0, "CMDY" 0, "ACTN" 0, "THRL" 1000;
+    }
+
+    95%, 100% {
+        font-variation-settings: "RMNC" 0, "CMDY" 1000, "ACTN" 0, "THRL" 0;
+    }
+}
+
+@keyframes bgChange {
+    0%, 27% {
+        background-color: #12C4E0; /* CMDY 단계의 배경색 */
+        color: #FFD900; /* CMDY 단계의 글자색 */
+    }
+
+    27%, 50% {
+        background-color: #5B1015; /* RMNC 단계의 배경색 */
+        color: #FA8AB2; /* RMNC 단계의 글자색 */
+    }
+
+    50%, 72% {
+        background-color: #FFE23E; /* ACTN 단계의 배경색 */
+        color: #762900; /* ACTN 단계의 글자색 */
+    }
+
+    72%, 95% {
+        background-color: #2D0C53; /* THRL 단계의 배경색 */
+        color: #81FF92; /* THRL 단계의 글자색 */
+    }
+
+    95%, 100% {
+        background-color: #12C4E0; /* 초기 배경색으로 복귀 */
+        color: #FFD900; /* 초기 글자색으로 복귀 */
+    }
+}

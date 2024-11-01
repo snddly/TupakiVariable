@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
+}
+
+body {
+    width: 100vw;
+    height: 10vh;
+    overflow: hidden;
+    background-color: #A6F591;
+
+    font-variation-settings: "RMNC" 1000, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    font-family: 'Tupaki2.5VF', sans-serif;
+    color: #FFAE44;
+    white-space: nowrap;
+    font-size: clamp(5rem, 20vw, 12rem);
+
+}
+
+.content-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+div span {
+    display: inline-block;
+
+    animation-name: change;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.64, .57, .67, 1.53);
+    animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+}
+
+
+@keyframes change {
+
+    0% {
+        transform: scale(1, 1) translateY(0);
+        background-position: calc(var(--char-index) * 5%);
+        font-variation-settings: "RMNC" 500, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    }
+
+    10% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    30% {
+        transform: scale(1, 1) translateY(-3px);
+    }
+
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+        background-position: calc(var(--char-index) * 20%);
+        font-variation-settings: "RMNC" 0, "CMDY" 1000, "ACTN" 0, "THRL" 0;
+
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-3px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+        background-position: calc(var(--char-index) * 5%);
+        font-variation-settings: "RMNC" 500, "CMDY" 0, "ACTN" 0, "THRL" 0;
+    }
+}

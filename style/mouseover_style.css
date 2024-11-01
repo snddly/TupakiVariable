@@ -1,0 +1,76 @@
+/* CSS 코드 */
+@font-face {
+    font-family: 'Tupaki2.5VF';
+    src: url('Tupaki2.5VF.ttf') format('truetype');
+}
+
+:root {
+    --fontRMNC: 600;
+    --fontCMDY: 60;
+    --fontACTN: 675;
+    --fontTHRL: 500;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 10rem;
+    font-family: 'Tupaki2.5VF', sans-serif;
+    font-variation-settings:
+        "RMNC"var(--fontRMNC),
+        "CMDY"var(--fontCMDY),
+        "ACTN"var(--fontACTN),
+        "THRL"var(--fontTHRL);
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    resize: none;
+    transition: font-variation-settings 0.3s;
+    white-space: pre-wrap;
+    overflow: hidden;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.heading-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#message {
+    font-family: Hack, monospace;
+    font-size: 1.8rem;
+    position: fixed;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: none;
+    color:#ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    mix-blend-mode: difference;
+  }
+  
+  #message.hide {
+    opacity: 0;
+  }
+  

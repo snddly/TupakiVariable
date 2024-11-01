@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>U do you [TupakiVariable]</title>
+
+    <link rel="stylesheet" href="../style/genre.css">
+    <!-- 메뉴스타일 -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="path/to/hack.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page active">
+            <!-- ((시작))메뉴 리스트 -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="arrowicon"></div>
+            </div>
+
+            <ul id="menu" class="menu">
+                <!-- 투파키 소개 -->
+                <li><a href="../index.html">TUPAKI who?</a></li>
+                <!-- 장르별 애니메이션 -->
+                <li><a style="background-color:#8c8c8c !important; color:#ffffff !important;" 
+                    href="#" onclick="return false;">U do you</a></li>
+                <!-- 랜덤애니메이션 -->
+                <li><a href="animation.html">Parade begins...</a></li>
+                <!-- 영화에 적용 -->
+                <li><a href="filmscenes.html">Action!</a></li>
+                <!-- 호버링 -->
+                <li><a href="mouseover.html">Keep moving</a></li>
+                <!-- 카메라적용 -->
+                <li><a href="camera.html">I wanna be a star</a></li>
+            </ul>
+            <script src="../script/menu.js"></script>
+            <!-- ((끝))메뉴 리스트 -->
+
+            <div id="box1">
+                <a href="genre_romance.html" class="btn" id="rmnc">Romance</a>
+                <a href="genre_action.html" class="btn" id="actn">Action</a>
+                <a href="genre_thriller.html" class="btn" id="thrl">Thriller</a>
+                <a href="genre_comedy.html" class="btn" id="cmdy">Comedy</a>
+            </div>
+     
+        </div>
+    </div>
+    <script>
+        const cursor = document.getElementById("customCursor");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.clientX - 25}px, ${e.clientY - 25}px)`;
+});
+    </script>
+<script>
+    function refreshPage() {
+        location.reload(); // 현재 페이지 새로고침
+    }
+    setInterval(refreshPage, 500000); 
+</script>
+</body>
+
+</html>

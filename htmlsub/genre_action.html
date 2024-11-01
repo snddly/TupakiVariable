@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action_U do you [TupakiVariable]</title>
+    <!-- 메뉴스타일 -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/genre_action.css">
+</head>
+
+<body>
+    <!-- ((시작))메뉴 리스트 -->
+    <a href="genres.html">
+        <div class="menu-icon" onclick="genres.html">
+            <div class="arrowicon"></div>
+        </div>
+    </a>
+    <script src="../script/menu.js"></script>
+    <!-- ((끝))메뉴 리스트 -->
+    <div class="word" id="word1">우리가</div>
+    <div class="word" id="word2">돈이 없지</div>
+    <div class="word" id="word3">가오가</div>
+    <div class="word" id="word4">없냐?</div>
+
+    </div>
+    <script src="../script/genre_action.js"></script>
+    <script>
+        function refreshPage() {
+            location.reload(); // 현재 페이지 새로고침
+        }
+        setInterval(refreshPage, 500000); 
+    </script>
+    <div id="message">/* Click anywhere */</div>
+</body>
+
+</html>
